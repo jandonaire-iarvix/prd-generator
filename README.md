@@ -2,34 +2,31 @@
 
 Un agente profesional de arquitectura que transforma ideas en documentos estructurados de requerimientos (PRDs), diagramas y esquemas de base de datos.
 
-## Instalación rápida (3 pasos)
+## Instalación - Un solo comando
 
-### Paso 1: Clonar el repositorio
-
-```bash
-git clone https://github.com/jandonaire-iarvix/prd-generator.git
-cd prd-generator
-```
-
-### Paso 2: Ejecutar setup
+### Opción 1: Command-line install (recomendado)
 
 **Windows (PowerShell):**
 ```powershell
-.\setup.ps1
+powershell -Command "iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jandonaire-iarvix/pdr-generator/main/install.ps1')"
 ```
 
 **Mac/Linux (Bash):**
 ```bash
-bash setup.sh
+bash <(curl -s https://raw.githubusercontent.com/jandonaire-iarvix/prd-generator/main/install.sh)
 ```
 
-### Paso 3: Abrir en Claude Code
+**¡Listo!** El agente se instala automáticamente en tu proyecto.
+
+### Opción 2: Clonar repositorio completo
+
+Si prefieres tener toda la documentación y ejemplos:
 
 ```bash
-code .
+git clone https://github.com/jandonaire-iarvix/prd-generator.git
+cd prd-generator
+./setup.sh  # o .\setup.ps1 en Windows
 ```
-
-**¡Listo!** Ahora puedes usar el agente en Claude Code.
 
 ---
 
