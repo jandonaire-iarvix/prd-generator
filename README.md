@@ -2,6 +2,37 @@
 
 Un agente profesional de arquitectura que transforma ideas en documentos estructurados de requerimientos (PRDs), diagramas y esquemas de base de datos.
 
+## Instalación rápida (3 pasos)
+
+### Paso 1: Clonar el repositorio
+
+```bash
+git clone https://github.com/jandonaire-iarvix/prd-generator.git
+cd prd-generator
+```
+
+### Paso 2: Ejecutar setup
+
+**Windows (PowerShell):**
+```powershell
+.\setup.ps1
+```
+
+**Mac/Linux (Bash):**
+```bash
+bash setup.sh
+```
+
+### Paso 3: Abrir en Claude Code
+
+```bash
+code .
+```
+
+**¡Listo!** Ahora puedes usar el agente en Claude Code.
+
+---
+
 ## ¿Qué es?
 
 **PRD Generator** es un asistente técnico integrado en Claude Code que te guía paso a paso para:
@@ -46,20 +77,28 @@ bash setup.sh
 3. Usa `/remember` para cargarlo
 4. Usa `/pdr-generador` directamente
 
-## Uso
+## Uso en Claude Code
+
+Una vez abierto en Claude Code, simplemente escribe en el chat:
 
 ### Crear un PRD nuevo
 
 ```
-/pdr-generador crear
+Crear un PRD
 ```
 
-El agente hará 5 preguntas estratégicas y generará un PRD completo.
+o
+
+```
+Quiero crear un PRD para mi proyecto
+```
+
+El agente hará 5 preguntas estratégicas y generará un PRD completo en `.pdr/PRD.v1.md`
 
 ### Revisar alineación durante desarrollo
 
 ```
-/pdr-generador revisar
+Revisar mi PRD
 ```
 
 Valida que tu implementación siga el PRD original. Detecta desviaciones.
@@ -67,33 +106,26 @@ Valida que tu implementación siga el PRD original. Detecta desviaciones.
 ### Actualizar PRD cuando cambia algo
 
 ```
-/pdr-generador actualizar
+Actualizar mi PRD
 ```
 
-Si cambió tu base de datos, arquitectura o features, el agente regenera:
-- PRD v2
-- Diagramas
-- SQL actualizado
-- Changelog
+Si cambió tu base de datos, arquitectura o features, el agente regenera v2 con changelog.
 
 ### Validar alineación con PRD
 
 ```
-/pdr-generador validar-alineacion
+Validar alineación de mi proyecto
 ```
 
-Análisis detallado: ¿qué se salió del scope? ¿qué cambió?
+Análisis detallado de desviaciones y scope.
 
 ### Diagnosticar estado del proyecto
 
 ```
-/pdr-generador diagnosticar
+Diagnosticar mi proyecto
 ```
 
-Análisis profundo:
-- ¿Dónde estás del MVP?
-- ¿Qué falta?
-- ¿Riesgos técnicos?
+Análisis: MVP, qué falta, riesgos técnicos.
 
 ## Estructura de archivos
 
