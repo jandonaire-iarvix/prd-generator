@@ -1,0 +1,26 @@
+{
+  "skill_name": "prd-generator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Necesito crear un PRD. Voy a construir un CRM para pequeños equipos de ventas (2-5 personas). El problema actual es que usan Excel para llevar leads y es muy desordenado - pierden información, no hay seguimiento automático, y todo es manual. Los usuarios son vendedores con conocimiento técnico básico (saben usar Office pero poco más). El flujo es: usuario abre la app → ingresa información del lead (nombre, email, empresa) → sistema guarda en BD → usuario puede hacer seguimiento marcando el estado del lead (nuevo, contactado, propuesta enviada, cerrado) → recibe notificación cuando toca seguimiento. Genera el PRD completo con diagrama de arquitectura, esquema SQL, y recomendación de MVP.",
+      "expected_output": "Generar archivo PRD.v1.md en la carpeta .pdr/ con: 1) Problema claramente definido, 2) Solución propuesta, 3) Usuarios identificados (primarios=vendedores, secundarios=admin de equipo), 4) Flujo paso a paso, 5) Features principales, 6) Arquitectura recomendada con diagrama Mermaid, 7) Tipo de tenancy (single/multi), 8) Diagrama de arquitectura (flowchart), 9) Diseño de BD con ERD, 10) SQL CREATE TABLE, 11) Nivel de complejidad, 12) MVP, 13) Explicación pedagógica. Debe crear también: diagrama-v1.mmd y schema-v1.sql.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 2,
+      "prompt": "Necesito revisar si mi implementación del CRM está alineada con el PRD. Hasta ahora implementé: tabla de usuarios con id, email, nombre, created_at; tabla de leads con id, user_id, nombre, email, empresa, estado, created_at; API REST básica con endpoints GET /leads, POST /leads, PATCH /leads/:id. Estoy usando PostgreSQL en lugar de lo que sugería el PRD. He agregado un campo 'source' en la tabla de leads para rastrear de dónde vino cada lead. Revisa si esto está alineado o si hay desviaciones importantes.",
+      "expected_output": "Reporte de alineación que incluya: 1) Porcentaje de alineación estimado, 2) Sección de alineaciones correctas (BD respeta estructura, API implementada), 3) Desviaciones detectadas (PostgreSQL vs otra BD, campo source agregado), 4) Impacto de cada desviación (bajo/medio/alto), 5) Recomendación final (continuar, actualizar PRD, etc). Guardar en .pdr/VALIDACIONES.md",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 3,
+      "prompt": "Necesito actualizar mi PRD. Cambios principales: 1) Decidimos agregar notificaciones por email automáticas cuando el lead cambia de estado, 2) Ahora el sistema debe soportar múltiples equipos (multi-tenant en lugar de single), 3) Agregamos tabla de 'eventos' para auditoría, 4) El MVP ahora incluye un dashboard de analytics básico. ¿Cuál es el impacto? ¿Debo actualizar a PRD v2?",
+      "expected_output": "Generar PRD.v2.md con la estructura completa actualizada incluyendo los nuevos cambios. Crear diagrama-v2.mmd y schema-v2.sql con las nuevas tablas. Actualizar CHANGELOG.md con: cambios de BD (tabla eventos, cambio a multi-tenant), features nuevas (notificaciones, dashboard), razones (auditoría, escalabilidad, visibilidad), e impactos (medio/alto en complejidad). Guardar PRD.v2.md y actualizar PRD.current.md.",
+      "files": [],
+      "assertions": []
+    }
+  ]
+}
