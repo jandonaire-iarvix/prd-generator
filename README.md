@@ -18,6 +18,14 @@ Un agente profesional de arquitectura que transforma ideas en documentos estruct
 
 ### Opción 1: Instalación automática (recomendado)
 
+**En Windows (PowerShell):**
+```powershell
+git clone https://github.com/tu-usuario/prd-generator.git
+cd prd-generator
+.\setup.ps1
+```
+
+**En Mac/Linux (Bash):**
 ```bash
 git clone https://github.com/tu-usuario/prd-generator.git
 cd prd-generator
@@ -29,7 +37,14 @@ bash setup.sh
 1. Clona este repositorio
 2. Copia la carpeta `.claude/` a tu directorio de proyecto
 3. Abre Claude Code en tu proyecto
-4. El Skill `/prd-generador` estará disponible
+4. El Skill `/pdr-generador` estará disponible
+
+### Opción 3: Sin clonar (solo copiar el agente)
+
+1. Copia el contenido de `.claude/agents/prd-generator.md`
+2. Pégalo en una nueva conversación de Claude Code
+3. Usa `/remember` para cargarlo
+4. Usa `/pdr-generador` directamente
 
 ## Uso
 

@@ -2,6 +2,14 @@
 
 ## 1. Clonar y configurar (2 min)
 
+**Windows (PowerShell):**
+```powershell
+git clone https://github.com/jose-andonaire/prd-generator.git
+cd prd-generator
+.\setup.ps1
+```
+
+**Mac/Linux (Bash):**
 ```bash
 git clone https://github.com/jose-andonaire/prd-generator.git
 cd prd-generator
