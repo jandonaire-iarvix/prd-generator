@@ -2,7 +2,32 @@
 
 Un agente profesional de arquitectura que transforma ideas en documentos estructurados de requerimientos (PRDs), diagramas y esquemas de base de datos.
 
-## Instalacion - Un solo comando
+## 🚀 Instalación rápida de la Skill
+
+**Desde GitHub (recomendado):**
+
+Descarga el archivo `prd-generator.skill` de este repositorio e instálalo en Claude Code:
+
+```bash
+# En Claude Code, ve a Skills > Install Skill > Upload File
+# Selecciona prd-generator.skill
+```
+
+**O usa el shortcut directo:**
+
+Una vez instalada, usa en Claude Code:
+
+```
+/pdr crear
+/pdr revisar
+/pdr actualizar
+/pdr validar
+/pdr diagnosticar
+```
+
+---
+
+## Instalacion - Métodos alternativos
 
 ### Opcion 1: Command-line install (recomendado)
 
